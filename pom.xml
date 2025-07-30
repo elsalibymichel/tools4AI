@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<modelVersion>4.0.0</modelVersion>
+
+<!-- Project Coordinates: The unique identifier for project -->
+<groupId>com.aiexam</groupId>
+<artifactId>fibonacci-demo</artifactId>
+<version>1.0-SNAPSHOT</version>
+
+<!-- Project Properties: Defines configuration values used throughout the POM -->
+<properties>
+    <!-- Use Java 11 as it's a stable LTS version -->
+    <maven.compiler.source>11</maven.compiler.source>
+    <maven.compiler.target>11</maven.compiler.target>
+    <!-- Specify UTF-8 encoding for consistency -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+</properties>
+
+<!-- Dependencies: External libraries your project needs -->
+<dependencies>
+    <!-- JUnit 5 for unit testing -->
+    <dependency>
+        <groupId>org.junit.jupiter</groupId>
+        <artifactId>junit-jupiter-api</artifactId>
+        <version>5.8.2</version>
+        <scope>test</scope> <!-- This dependency is only for the test phase -->
+    </dependency>
+</dependencies>
+
+<!-- Build Configuration: Defines how Maven builds the project -->
+<build>
+    <plugins>
+        <!-- Maven JAR Plugin: Configures how the final JAR file is built -->
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-jar-plugin</artifactId>
+            <version>3.2.2</version>
+            <configuration>
+                <archive>
+                    <manifest>
+                        <!-- This makes the JAR executable with 'java -jar' -->
+                        <mainClass>com.aiexam.fibonacci.App</mainClass>
+                    </manifest>
+                </archive>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+
+</project>
