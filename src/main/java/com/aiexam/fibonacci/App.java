@@ -10,7 +10,7 @@ import java.util.Scanner;
 public class App {
 
   /**
-   * Calculates the n-th Fibonacci number using recursion, with detailed profiling.
+   * Calculates the n-th Fibonacci number using recursion efficiently.
    *
    * @param n The non-negative integer position in the Fibonacci sequence.
    * @return The n-th Fibonacci number as a BigInteger.
